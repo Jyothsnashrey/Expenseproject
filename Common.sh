@@ -17,7 +17,7 @@ App_prereq()
   mkdir $1 &>>log_file
   echo $?
   Head "download Application content"
-  curl -o /tmp/${component} https://expense-artifacts.s3.amazonaws.com/${component}.zip &>>log_file
+  curl -o /tmp/${component} https://expense-artifacts.s3.amazonaws.com/${component }.zip &>>log_file
   cd $1 &>>log_file
   echo $?
   Head "Extracting application content"

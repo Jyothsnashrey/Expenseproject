@@ -1,6 +1,6 @@
 Mysql_Password=$1
 component=backend
-source common.sh
+source Common.sh
 Head "disable default version of nodejs"
 dnf module disable nodejs -y &>>log_file
 echo $?
