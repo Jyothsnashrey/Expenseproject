@@ -1,10 +1,6 @@
 Mysql_Password=$1
-log_file=/tmp/expense.log
-
-Head()
-{
- echo -e "\e[35m$1\e[0m"
-}
+component=backend
+source common.sh
 Head "disable default version of nodejs"
 dnf module disable nodejs -y &>>log_file
 echo $?
@@ -17,27 +13,12 @@ echo $?
 Head "Configure backend service"
 cp  backend.service /etc/systemd/system/backend.service &>>log_file
 echo $?
-Head "Adding application user"
-useradd expense &>>log_file
-echo $?
-Head "Remove existing App content"
-rm -rf /app &>>log_file
-echo $?
-Head "Create Application Directory"
-mkdir /app &>>log_file
-echo $?
-Head "download Application content"
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>log_file
-cd /app &>>log_file
-echo $?
-Head "Extracting application content"
 
-unzip /tmp/backend.zip &>>log_file
-echo $?
-Head "Downloading application content"
-npm install &>>log_file
-echo $?
+App_prereq "/app"
 
+ Head "Downloading application content"
+  npm install &>>log_file
+  echo $?
 Head "Reloading application content and restarting service"
 
 systemctl daemon-reload &>>log_file
