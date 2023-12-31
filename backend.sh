@@ -33,6 +33,7 @@ npm install
 
 
 echo Reloading application content and restarting service
+
 systemctl daemon-reload
 
 systemctl enable backend
