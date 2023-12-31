@@ -22,7 +22,7 @@ App_prereq()
   echo $?
   Head "Extracting application content"
 
-  unzip /tmp/backend.zip &>>log_file
+  unzip /tmp/${component} &>>log_file
   echo $?
 
 }
