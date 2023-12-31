@@ -13,7 +13,7 @@ echo $?
 Head "Removing default content"
 rm -rf /usr/share/nginx/html/* &>>log_file
 echo $?
-Head "Downloading Application Code"
+Head "Downloading Application Codes"
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip &>>log_file
 echo $?
 
