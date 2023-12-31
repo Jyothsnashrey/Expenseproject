@@ -20,19 +20,19 @@ rm -rf /app &>>/tmp/expense.log
 echo -e "\e[35mCreate Application Directory\e[0m"
 mkdir /app &>>/tmp/expense.log
 
-echo -e"\e[35m download Application content\e[0m"
+echo -e "\e[35m download Application content\e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>/tmp/expense.log
 cd /app &>>/tmp/expense.log
 
-echo -e"\e[35m Extracting application content\e[0m"
+echo -e "\e[35m Extracting application content\e[0m"
 
 unzip /tmp/backend.zip &>>/tmp/expense.log
 
-echo -e"\e[35m Downloading application content\e[0m"
+echo -e "\e[35m Downloading application content\e[0m"
 npm install &>>/tmp/expense.log
 
 
-echo -e"\e[35m Reloading application content and restarting service\e[0m"
+echo -e "\e[35m Reloading application content and restarting service\e[0m"
 
 systemctl daemon-reload &>>/tmp/expense.log
 
