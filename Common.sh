@@ -22,7 +22,7 @@ Stat $?
 
   unzip /tmp/${component} &>>log_file
 Stat $?
-Stat
+Stat()
 {
   if [ "$1" -eq 0 ]; then
     echo Success
