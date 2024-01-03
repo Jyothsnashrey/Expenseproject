@@ -22,6 +22,7 @@ Stat $?
 
   unzip /tmp/${component} &>>log_file
 Stat $?
+}
 
 Stat()
 {
@@ -31,5 +32,5 @@ Stat()
     echo Failure
     exit 1
    fi
-}
-}
+   }
+
