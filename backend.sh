@@ -15,6 +15,11 @@ Head "Configure backend service"
 cp  backend.service /etc/systemd/system/backend.service &>>log_file
 Stat $?
 
+Head "Adding Application User"
+if [ "$?" -ne 0 ]; then
+  useradd expense &>>log_file
+fi
+
 App_prereq "/app"
 
  Head "Downloading application content"

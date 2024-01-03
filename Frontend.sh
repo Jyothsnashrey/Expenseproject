@@ -7,7 +7,7 @@ Stat $?
 Head "Copy Expense.conf file"
 cp expense.conf  /etc/nginx/default.d/expense.conf &>>log_file
 Stat $?
-/usr/share/nginx/
+
 App_prereq "/usr/share/nginx/html"
 Head "start Nginx service"
 systemctl enable nginx &>>log_file

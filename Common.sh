@@ -7,13 +7,7 @@ Head()
 App_prereq()
 {
   DIR=$1
-  Head "Adding application user"
 
-  id expense &>>log_file
-  if [ $? -ne 0 ]; then
-    useradd expense &>>log_file
-  fi
- Stat $?
   Head "Remove existing App content"
   rm -rf $1 &>>log_file
 Stat $?
