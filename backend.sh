@@ -26,7 +26,7 @@ App_prereq "/app"
   npm install &>>log_file
 Stat $?
 
-Head "Reloading application content and restarting service"
+Head "Reloading my application content and restarting service"
 
 systemctl daemon-reload &>>log_file
 

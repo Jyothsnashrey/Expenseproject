@@ -26,7 +26,7 @@ Stat $?
 Stat()
 {
   if [ "$1" -eq 0 ]; then
-    echo Success
+    echo Successfull
   else
     echo Failure
     exit 1

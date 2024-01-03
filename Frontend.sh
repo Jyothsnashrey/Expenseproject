@@ -4,7 +4,7 @@ source Common.sh
 Head "Installing Nginx"
 dnf install nginx -y &>>log_file
 Stat $?
-Head "Copy Expense.conf file"
+Head "Copy  the Expense.conf file"
 cp expense.conf  /etc/nginx/default.d/expense.conf &>>log_file
 Stat $?
 
