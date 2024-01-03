@@ -1,5 +1,5 @@
 Mysql_Password=$1
-if [ -z "Mysql_Password" ]; then
+if [ -z "$Mysql_Password" ]; then
   echo Input Mysql_Password is missing
   exit 1
   fi
