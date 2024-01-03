@@ -17,11 +17,12 @@ Stat $?
   Head "download Application content"
   curl -o /tmp/${component} https://expense-artifacts.s3.amazonaws.com/${component}.zip &>>log_file
   cd $1 &>>log_file
- Stat $?
+Stat $?
   Head "Extracting application content"
 
   unzip /tmp/${component} &>>log_file
 Stat $?
+
 Stat()
 {
   if [ "$1" -eq 0 ]; then
